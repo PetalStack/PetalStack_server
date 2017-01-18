@@ -1,0 +1,24 @@
+
+Project
+  testing attributes
+[32m    is valid with attributes valid[0m
+[32m    is not valid without title[0m
+[32m    is not valid without start_date[0m
+[32m    is not valid without end_date[0m
+
+Task
+  Associations
+[32m    belongs_to project[0m
+  testing attributes
+[32m    is valid with valid attributes[0m
+[32m    is not valid without project[0m
+[32m    is not valid without title[0m
+[32m    is not valid without a start_date[0m
+[32m    is not valid without a end_date[0m
+[32m    is valid when priority is HIGH[0m
+[32m    is valid when priority is MEDIUN[0m
+[32m    is valid when priority is LOW[0m
+
+Finished in 0.09576 seconds (files took 1.37 seconds to load)
+[32m13 examples, 0 failures[0m
+
