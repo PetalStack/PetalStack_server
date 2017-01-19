@@ -13,27 +13,27 @@ class Builders::TaskBuilder
     self
   end
 
-  def without_start_date
-    @start_date =  nil
+  def paramsStartDate start_date
+    @start_date =  start_date
     self
   end
 
-  def without_start_date
-    @end_date =  nil
+  def paramsEndDate end_date
+    @end_date =  end_date
     self
   end
 
-  def with_project project
+  def paramsProject project
     @project_id = project
     self
   end
 
-  def with_description
+  def with_escription
     @description = 'Insert description for task'
     self
   end
 
-  def with_priority priority
+  def paramsPriority priority
     @priority = Priority::PRIORITY_MAP[priority]
     self
   end

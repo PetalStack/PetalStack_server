@@ -1,24 +1,69 @@
 
 Project
-  testing attributes
-[32m    is valid with attributes valid[0m
-[32m    is not valid without title[0m
-[32m    is not valid without start_date[0m
-[32m    is not valid without end_date[0m
+[32m  is valid with attributes valid[0m
+[32m  is not valid without title[0m
+[32m  is not valid without start_date[0m
+[32m  is not valid without end_date[0m
 
 Task
-  Associations
-[32m    belongs_to project[0m
-  testing attributes
-[32m    is valid with valid attributes[0m
-[32m    is not valid without project[0m
-[32m    is not valid without title[0m
-[32m    is not valid without a start_date[0m
-[32m    is not valid without a end_date[0m
-[32m    is valid when priority is HIGH[0m
-[32m    is valid when priority is MEDIUN[0m
-[32m    is valid when priority is LOW[0m
+[32m  belongs_to project[0m
+[32m  is valid with valid attributes[0m
+[32m  is not valid without project[0m
+[32m  is not valid without title[0m
+[32m  is not valid without a start_date[0m
+[32m  is not valid without a end_date[0m
+[32m  is valid when priority is HIGH[0m
+[32m  is valid when priority is MEDIUN[0m
+[32m  is valid when priority is LOW[0m
+[31m  is not valid when task.end_date is bigger than Project.end_date (FAILED - 1)[0m
+[31m  is not valid when task.star_date is less than Project.start_date (FAILED - 2)[0m
+[31m  is valid when task is create with status is Open (FAILED - 3)[0m
+[31m  is valid when status is Closed (FAILED - 4)[0m
+[31m  is valid when status is Stopped (FAILED - 5)[0m
 
-Finished in 0.09576 seconds (files took 1.37 seconds to load)
-[32m13 examples, 0 failures[0m
+Failures:
+
+  1) Task is not valid when task.end_date is bigger than Project.end_date
+     [31mFailure/Error: expect(task).to_not be_valid[0m
+     [31m  expected #<Task id: 55, title: "[\"Title Task\", Thu, 19 Jan 2017 00:38:03 -0200, Th...", description: nil, start_date: "2017-01-19", end_date: "2017-02-02", created_at: "2017-01-19 02:38:03", updated_at: "2017-01-19 02:38:03", project_id: 85, priority: nil> not to be valid[0m
+     [36m# ./spec/models/task_spec.rb:53:in `block (2 levels) in <top (required)>'[0m
+
+  2) Task is not valid when task.star_date is less than Project.start_date
+     [31mFailure/Error: expect(task).to_not be_valid[0m
+     [31m  expected #<Task id: 55, title: "[\"Title Task\", Thu, 19 Jan 2017 00:38:03 -0200, Th...", description: nil, start_date: "2017-01-05", end_date: "2017-01-26", created_at: "2017-01-19 02:38:03", updated_at: "2017-01-19 02:38:03", project_id: 85, priority: nil> not to be valid[0m
+     [36m# ./spec/models/task_spec.rb:59:in `block (2 levels) in <top (required)>'[0m
+
+  3) Task is valid when task is create with status is Open
+     [31mFailure/Error: expect(task.status).to eq "Open"[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `status' for #<Task:0x0000000424ef88>[0m
+     [36m# ./spec/models/task_spec.rb:65:in `block (2 levels) in <top (required)>'[0m
+
+  4) Task is valid when status is Closed
+     [31mFailure/Error: task = Builders::TaskBuilder.new.paramsProject(project.id).paramsStatus(:closed).buildTask[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `paramsStatus' for #<Builders::TaskBuilder:0x0000000426ed88>[0m
+     [31m  Did you mean?  paramsStartDate[0m
+     [36m# ./spec/models/task_spec.rb:70:in `block (2 levels) in <top (required)>'[0m
+
+  5) Task is valid when status is Stopped
+     [31mFailure/Error: task = Builders::TaskBuilder.new.paramsProject(project.id).paramsStatus(:stopped).buildTask[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `paramsStatus' for #<Builders::TaskBuilder:0x0000000427d248>[0m
+     [31m  Did you mean?  paramsStartDate[0m
+     [36m# ./spec/models/task_spec.rb:75:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 0.09891 seconds (files took 1.33 seconds to load)
+[31m18 examples, 5 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/models/task_spec.rb:50[0m [36m# Task is not valid when task.end_date is bigger than Project.end_date[0m
+[31mrspec ./spec/models/task_spec.rb:56[0m [36m# Task is not valid when task.star_date is less than Project.start_date[0m
+[31mrspec ./spec/models/task_spec.rb:62[0m [36m# Task is valid when task is create with status is Open[0m
+[31mrspec ./spec/models/task_spec.rb:68[0m [36m# Task is valid when status is Closed[0m
+[31mrspec ./spec/models/task_spec.rb:73[0m [36m# Task is valid when status is Stopped[0m
 

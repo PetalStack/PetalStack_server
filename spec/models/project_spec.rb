@@ -10,7 +10,6 @@ RSpec.describe Project, type: :model do
     )
   }
 
-    describe "testing attributes" do
       it "is valid with attributes valid" do
         expect(subject).to be_valid
       end
@@ -26,6 +25,4 @@ RSpec.describe Project, type: :model do
         subject.end_date = nil
         expect(subject).to_not be_valid
       end
-    end
-
 end

@@ -2,18 +2,15 @@ require 'rails_helper'
 
 RSpec.describe Task, type: :model do
 
-  project = Project.create(title: "Title Project",start_date: DateTime.now,end_date: DateTime.now + 1.week)
+  project = Builders::ProjectBuilder.new.buildProject
 
-  describe "Associations" do
     it " belongs_to project" do
       project = described_class.reflect_on_association(:project)
       expect(project.macro).to eq :belongs_to
     end
-  end
 
-  task = Builders::TaskBuilder.new.with_project(project.id).with_priority(:high).buildTask
+  task = Builders::TaskBuilder.new.paramsProject(project.id).paramsPriority(:high).buildTask
 
-  describe " testing attributes" do
     it "is valid with valid attributes" do
       expect(task).to be_valid
     end
@@ -39,22 +36,45 @@ RSpec.describe Task, type: :model do
     end
 
     it "is valid when priority is MEDIUN" do
-      project = Project.create(title: "Title Project",start_date: DateTime.now,end_date: DateTime.now + 1.week)
-      task = Builders::TaskBuilder.new.with_priority(:mediun).with_project(project.id).buildTask
+      project = Builders::ProjectBuilder.new.buildProject
+      task = Builders::TaskBuilder.new.paramsPriority(:mediun).paramsProject(project.id).buildTask
       expect(task.priority).to eq Priority::PRIORITY_MAP[:mediun]
     end
 
     it "is valid when priority is LOW" do
-      project = Project.create(title: "Title Project",start_date: DateTime.now,end_date: DateTime.now + 1.week)
-      task = Builders::TaskBuilder.new.with_priority(:low).with_project(project.id).buildTask
+      project = Builders::ProjectBuilder.new.buildProject
+      task = Builders::TaskBuilder.new.paramsPriority(:low).paramsProject(project.id).buildTask
       expect(task.priority).to eq Priority::PRIORITY_MAP[:low]
     end
 
+    it "is not valid when task.end_date is bigger than Project.end_date" do
+      project = Builders::ProjectBuilder.new.buildProject
+      task = Builders::TaskBuilder.new.paramsEndDate(DateTime.now + 2.week).paramsProject(project.id).buildTask
+      expect(task).to_not be_valid
+    end
 
+    it "is not valid when task.star_date is less than Project.start_date" do
+      project = Builders::ProjectBuilder.new.buildProject
+      task = Builders::TaskBuilder.new.paramsStartDate(DateTime.now - 2.week).paramsProject(project.id).buildTask
+      expect(task).to_not be_valid
+    end
 
+    it "is valid when task is create with status is Open" do
+      project = Builders::ProjectBuilder.new.buildProject
+      task = Builders::TaskBuilder.new.paramsProject(project.id).buildTask
+      expect(task.status).to eq "Open"
+    end
 
+    it "is valid when status is Closed" do
+      project = Builders::ProjectBuilder.new.buildProject
+      task = Builders::TaskBuilder.new.paramsProject(project.id).paramsStatus(:closed).buildTask
+      expect(task.status).to eq "Closed"
+    end
+    it "is valid when status is Stopped" do
+      project = Builders::ProjectBuilder.new.buildProject
+      task = Builders::TaskBuilder.new.paramsProject(project.id).paramsStatus(:stopped).buildTask
+      expect(task.status).to eq "Stopped"
+    end
 
-  end
-6
 
 end
