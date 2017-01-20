@@ -5,15 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-  project = Project.create(
-    title: 'Title project',
-    start_date: DateTime.now,
-    end_date: DateTime.now + 1.week
-  )
 
-  task = Task.create(
-    title: 'Title task',
-    start_date: DateTime.now,
-    end_date: DateTime.now + 1.week,
-    project_id: project.id
-  )
+  project = Builders::ProjectBuilder.new.build
+  task = Builders::TaskBuilder.new.paramProject(project.id).build
+
+
+  #   User.create(name:'@name',email:'email@email.com',password:'@password',username:'@username')
