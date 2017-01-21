@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/app/controllers/projects_controller.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/app/controllers/projects_controller.rb": [
         1,
         1,
         null,
@@ -54,11 +54,11 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/app/controllers/application_controller.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/app/controllers/application_controller.rb": [
         1,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/spec/controllers/tasks_controller_spec.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/spec/controllers/tasks_controller_spec.rb": [
         1,
         null,
         null,
@@ -219,7 +219,7 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/app/controllers/tasks_controller.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/app/controllers/tasks_controller.rb": [
         1,
         1,
         null,
@@ -272,7 +272,7 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/spec/controllers/users_controller_spec.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/spec/controllers/users_controller_spec.rb": [
         1,
         null,
         null,
@@ -433,7 +433,7 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/app/controllers/users_controller.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/app/controllers/users_controller.rb": [
         1,
         1,
         null,
@@ -486,7 +486,7 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/spec/models/project_spec.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/spec/models/project_spec.rb": [
         1,
         null,
         1,
@@ -510,18 +510,18 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/app/models/project.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/app/models/project.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/app/models/application_record.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/app/models/builders/project_builder.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/app/models/builders/project_builder.rb": [
         1,
         null,
         1,
@@ -552,7 +552,7 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/spec/models/task_spec.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/spec/models/task_spec.rb": [
         1,
         null,
         1,
@@ -634,7 +634,7 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/app/models/task.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/app/models/task.rb": [
         1,
         1,
         1,
@@ -653,7 +653,7 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/app/models/builders/task_builder.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/app/models/builders/task_builder.rb": [
         1,
         null,
         1,
@@ -709,7 +709,7 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/spec/models/user_spec.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -748,13 +748,13 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/app/models/user.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/app/models/user.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/app/models/builders/user_builder.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/app/models/builders/user_builder.rb": [
         1,
         null,
         1,
@@ -795,7 +795,7 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/spec/requests/projects_spec.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/spec/requests/projects_spec.rb": [
         1,
         null,
         1,
@@ -807,7 +807,7 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/spec/requests/tasks_spec.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/spec/requests/tasks_spec.rb": [
         1,
         null,
         1,
@@ -819,7 +819,7 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/spec/requests/users_spec.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/spec/requests/users_spec.rb": [
         1,
         null,
         1,
@@ -831,48 +831,7 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/spec/routing/projects_routing_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/spec/routing/tasks_routing_spec.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/spec/routing/projects_routing_spec.rb": [
         1,
         null,
         1,
@@ -913,7 +872,48 @@
         null,
         null
       ],
-      "/home/joaohenrique/git/PetalStack_OFFICE/PetalStack_server/spec/routing/users_routing_spec.rb": [
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/spec/routing/tasks_routing_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/joaohenrique/git/PetalStack_OFFICE/api-petalstack/spec/routing/users_routing_spec.rb": [
         1,
         null,
         1,
@@ -955,6 +955,6 @@
         null
       ]
     },
-    "timestamp": 1484961181
+    "timestamp": 1484961449
   }
 }
